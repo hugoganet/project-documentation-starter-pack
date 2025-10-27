@@ -1,0 +1,31 @@
+project:
+  name: REPLACE_ME
+  summary: "One-sentence description of the product."
+  owner: your-name
+  stage: discovery # discovery | build | alpha | beta | prod | sunset
+  tags: [ai-first, solo-founder]
+
+repositories:
+  - url: https://github.com/REPLACE_ME
+
+contacts:
+  - role: owner
+    name: your-name
+    email: you@example.com
+
+environments:
+  - name: dev
+    url: https://dev.example.com
+  - name: prod
+    url: https://example.com
+
+status:
+  current_sprint: 0
+  last_updated: 2025-10-26
+
+conventions:
+  sessions_pattern: "YYYY-MM-DD-session-###.md"
+  adr_pattern: "ADR-XXXX-title-kebab-case.md"
+  spec_pattern: "feature-title-kebab-case.md"
+  story_pattern: "US-####"
+  story_filename: "US-####-kebab-case.md"
