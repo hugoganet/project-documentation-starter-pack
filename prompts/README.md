@@ -14,18 +14,28 @@ Files
 - `data_schema_prompt.md` — defines entities, ERD, machine-readable schemas, dictionary, sample data, and migration/ADR notes.
 - `ai_doc_update_prompt.md` — updates docs based on a commit/PR diff; outputs minimal patches for specs, architecture, data, ADRs, tasks, and changelog.
 
+- `doc_backfill_existing_project_prompt.md` — guide for using AI (or a human-guided AI session) to inspect an existing codebase and produce a documentation backfill: identify missing docs, surface uncertainties, and propose actionable patch snippets and a prioritized plan for filling gaps.
+
 How to use
 
 1. Start a session by having the AI read `docs/context.md` and then load `prompts/ai_system_prompt.md` as the system prompt.
 2. Use `prompts/ai_update_instructions.md` as a checklist during interactions to ensure outputs are actionable and documented (Summary, Decisions, Actions, Artifacts).
 3. First-time flow (run these prompts in order):
-   - `product_vision_prompt.md`
-   - `user_stories_prompt.md`
-   - `tech_stack_prompt.md`
-   - `data_schema_prompt.md`
+
+- `product_vision_prompt.md`
+- `user_stories_prompt.md`
+- `tech_stack_prompt.md`
+- `data_schema_prompt.md`
+
+Onboarding / Backfill flow (existing projects):
+
+- `doc_backfill_existing_project_prompt.md` — run this to generate a docs skeleton, surface TODOs, and produce candidate patches to bring documentation up to date.
+
 4. Maintenance flow (on PRs/commits):
-   - Run `ai_doc_update_prompt.md` to generate doc patches based on the diff.
-   - Then run your verification/linter prompt to validate structure and cross-links.
+
+- Run `ai_doc_update_prompt.md` to generate doc patches based on the diff.
+- Then run your verification/linter prompt to validate structure and cross-links.
+
 5. Ask the AI to output edits as small patch snippets or a markdown diff so you can paste them into files or use scripts to apply them.
 
 Best practices for AI consistency

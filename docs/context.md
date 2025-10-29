@@ -26,6 +26,8 @@ This is the single entry point for reconstructing project context. AI tools and 
 - Use the system prompt in `../prompts/ai_system_prompt.md`.
 - After a session, log it in `./ai_sessions/` and reference this context bundle version.
 
+- For reconstructing or backfilling documentation in an existing repo, run `../prompts/doc_backfill_existing_project_prompt.md` so the AI (or an AI-assisted human session) can identify missing docs, surface uncertainties, and propose actionable patch snippets.
+
 ## First-time flow (new projects)
 
 Run prompts in this order to establish a solid foundation:
